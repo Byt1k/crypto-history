@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+
+}
+
+.timeline {
+  background: radial-gradient(240.81% 73.96% at 1.18% 5.94%, rgba(250, 188, 44, 0.13) 0%, rgba(0, 0, 0, 0.00) 100%), radial-gradient(139.9% 46.22% at 50% 75.67%, #080538 0%, rgba(0, 0, 0, 0.00) 100%), var(--ct-black, #000);
+  overflow-x: scroll;
+
+
+
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    border-radius: 9em;
+    height: 24px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 24px;
+    background: var(--ct-primary-base, #FABC2C);
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.15) inset;
+    border-radius: 9em;
+  }
+
+}
