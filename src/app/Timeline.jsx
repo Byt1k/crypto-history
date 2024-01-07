@@ -8,10 +8,15 @@ const Timeline = () => {
 
     const ZOOM_MIN = 1
     const ZOOM_MAX = 12
-    const WIDTH = window.innerWidth + 0.5
-    const HEIGHT = window.innerHeight - 24
+    const [WIDTH, SET_WIDTH] = useState(0)
+    const [HEIGHT, SET_HEIGHT] = useState(0)
     const PADDING = 50
     const VIEW_WIDTH = WIDTH - PADDING
+
+    useEffect(() => {
+        SET_WIDTH(window.innerWidth + 0.5)
+        SET_HEIGHT(window.innerHeight - 24)
+    }, [])
 
     const timelineRef = useRef(null)
     const containerRef = useRef(null)
